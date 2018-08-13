@@ -8,7 +8,7 @@ public class AdminLogin15
     public static final int BLOCK_LENGTH = 1;
     public static final int TEMPLATE_ID = 15;
     public static final int SCHEMA_ID = 1;
-    public static final int SCHEMA_VERSION = 5;
+    public static final int SCHEMA_VERSION = 9;
 
     private final AdminLogin15 parentMessage = this;
     private DirectBuffer buffer;

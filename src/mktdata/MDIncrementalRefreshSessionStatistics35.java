@@ -8,7 +8,7 @@ public class MDIncrementalRefreshSessionStatistics35
     public static final int BLOCK_LENGTH = 11;
     public static final int TEMPLATE_ID = 35;
     public static final int SCHEMA_ID = 1;
-    public static final int SCHEMA_VERSION = 5;
+    public static final int SCHEMA_VERSION = 9;
 
     private final MDIncrementalRefreshSessionStatistics35 parentMessage = this;
     private DirectBuffer buffer;
@@ -457,6 +457,54 @@ public class MDIncrementalRefreshSessionStatistics35
         public NoMDEntries mDEntryType(final MDEntryTypeStatistics value)
         {
             CodecUtil.charPut(buffer, offset + 18, value.value());
+            return this;
+        }
+
+        public static int MDEntrySizeId()
+        {
+            return 271;
+        }
+
+        public static String MDEntrySizeMetaAttribute(final MetaAttribute metaAttribute)
+        {
+            switch (metaAttribute)
+            {
+                case EPOCH: return "unix";
+                case TIME_UNIT: return "nanosecond";
+                case SEMANTIC_TYPE: return "Qty";
+            }
+
+            return "";
+        }
+
+        public static int mDEntrySizeNullValue()
+        {
+            return 2147483647;
+        }
+
+        public static int mDEntrySizeMinValue()
+        {
+            return -2147483647;
+        }
+
+        public static int mDEntrySizeMaxValue()
+        {
+            return 2147483647;
+        }
+
+        public int mDEntrySize()
+        {
+            if (actingVersion < 8)
+            {
+                return 2147483647;
+            }
+
+            return CodecUtil.int32Get(buffer, offset + 19, java.nio.ByteOrder.LITTLE_ENDIAN);
+        }
+
+        public NoMDEntries mDEntrySize(final int value)
+        {
+            CodecUtil.int32Put(buffer, offset + 19, value, java.nio.ByteOrder.LITTLE_ENDIAN);
             return this;
         }
     }

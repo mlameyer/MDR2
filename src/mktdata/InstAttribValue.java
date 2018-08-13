@@ -247,4 +247,26 @@ public class InstAttribValue
         CodecUtil.uint32PutChoice(buffer, offset, 19, value, java.nio.ByteOrder.LITTLE_ENDIAN);
         return this;
     }
+
+    public boolean TriangulationEligible()
+    {
+        return CodecUtil.uint32GetChoice(buffer, offset, 20, java.nio.ByteOrder.LITTLE_ENDIAN);
+    }
+
+    public InstAttribValue TriangulationEligible(final boolean value)
+    {
+        CodecUtil.uint32PutChoice(buffer, offset, 20, value, java.nio.ByteOrder.LITTLE_ENDIAN);
+        return this;
+    }
+
+    public boolean VariableCabEligible()
+    {
+        return CodecUtil.uint32GetChoice(buffer, offset, 21, java.nio.ByteOrder.LITTLE_ENDIAN);
+    }
+
+    public InstAttribValue VariableCabEligible(final boolean value)
+    {
+        CodecUtil.uint32PutChoice(buffer, offset, 21, value, java.nio.ByteOrder.LITTLE_ENDIAN);
+        return this;
+    }
 }

@@ -8,7 +8,7 @@ public class MDIncrementalRefreshTradeSummary42
     public static final int BLOCK_LENGTH = 11;
     public static final int TEMPLATE_ID = 42;
     public static final int SCHEMA_ID = 1;
-    public static final int SCHEMA_VERSION = 5;
+    public static final int SCHEMA_VERSION = 9;
 
     private final MDIncrementalRefreshTradeSummary42 parentMessage = this;
     private DirectBuffer buffer;
@@ -567,6 +567,54 @@ public class MDIncrementalRefreshTradeSummary42
             final int bytesCopied = Math.min(length, 1);
             System.arraycopy(mDEntryTypeValue, 0, dst, offset, bytesCopied);
             return bytesCopied;
+        }
+
+        public static int MDTradeEntryIDId()
+        {
+            return 37711;
+        }
+
+        public static String MDTradeEntryIDMetaAttribute(final MetaAttribute metaAttribute)
+        {
+            switch (metaAttribute)
+            {
+                case EPOCH: return "unix";
+                case TIME_UNIT: return "nanosecond";
+                case SEMANTIC_TYPE: return "int";
+            }
+
+            return "";
+        }
+
+        public static long mDTradeEntryIDNullValue()
+        {
+            return 4294967295L;
+        }
+
+        public static long mDTradeEntryIDMinValue()
+        {
+            return 0L;
+        }
+
+        public static long mDTradeEntryIDMaxValue()
+        {
+            return 4294967293L;
+        }
+
+        public long mDTradeEntryID()
+        {
+            if (actingVersion < 7)
+            {
+                return 4294967295L;
+            }
+
+            return CodecUtil.uint32Get(buffer, offset + 26, java.nio.ByteOrder.LITTLE_ENDIAN);
+        }
+
+        public NoMDEntries mDTradeEntryID(final long value)
+        {
+            CodecUtil.uint32Put(buffer, offset + 26, value, java.nio.ByteOrder.LITTLE_ENDIAN);
+            return this;
         }
     }
 

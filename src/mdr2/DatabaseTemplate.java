@@ -8,6 +8,9 @@ package mdr2;
 import java.util.Properties;
 import javax.swing.JTextArea;
 import database.*;
+import connamara.tlasttrade;
+import connamara.tsettlement;
+import connamara.ttopofbook;
 
 /**
  *
@@ -74,10 +77,14 @@ class DatabaseTemplate
                 
             case 32:Template32 tmp32 = new Template32(object.getTableName(), object.getColData(), prop, option);
                     tmp32.execute();
+                    ttopofbook tb = new ttopofbook(object.getTableName(), object.getColData(), prop, option);
+                    tb.execute();
                 break;
                 
             case 33:Template33 tmp33 = new Template33(object.getTableName(), object.getColData(), prop, option);
                     tmp33.execute();
+                    tsettlement ts = new tsettlement(object.getTableName(), object.getColData(), prop, option);
+                    ts.execute();
                 break;
                 
             case 34:Template34 tmp34 = new Template34(object.getTableName(), object.getColData(), prop, option);
@@ -118,6 +125,8 @@ class DatabaseTemplate
                
             case 42:Template42 tmp42 = new Template42(object.getTableName(), object.getColData(), prop, option);
                     tmp42.execute();
+                    tlasttrade lt = new tlasttrade(object.getTableName(), object.getColData(), prop, option);
+                    lt.execute();
                 break;
                 
             case 421:Template421 tmp421 = new Template421(object.getTableName(), object.getColData(), prop);

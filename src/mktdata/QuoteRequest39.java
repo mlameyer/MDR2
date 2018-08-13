@@ -8,7 +8,7 @@ public class QuoteRequest39
     public static final int BLOCK_LENGTH = 35;
     public static final int TEMPLATE_ID = 39;
     public static final int SCHEMA_ID = 1;
-    public static final int SCHEMA_VERSION = 5;
+    public static final int SCHEMA_VERSION = 9;
 
     private final QuoteRequest39 parentMessage = this;
     private DirectBuffer buffer;

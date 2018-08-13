@@ -36,6 +36,15 @@ class DecodeMessage
     private Message39Decoder msg39; 
     private Message41Decoder msg41; 
     private Message42Decoder msg42; 
+    private Message46Decoder msg46;
+    private Message48Decoder msg48;
+    private Message49Decoder msg49;
+    private Message50Decoder msg50;
+    private Message51Decoder msg51;
+    private Message52Decoder msg52;
+    private Message54Decoder msg54;
+    private Message55Decoder msg55;
+    private Message56Decoder msg56;
 
     public DecodeMessage(LinkedList<DatabaseObject> decodedData, boolean option) 
     {
@@ -172,6 +181,72 @@ class DecodeMessage
                 msg42 = new Message42Decoder(message, bufferOffset, actingBlockLength, actingVersion, option);
                 decodedData.add(msg42.decodeNoMDEntries());
                 decodedData.add(msg42.decodeNoOrderIDEntries());
+                break;
+                
+            case 46: 
+                
+                msg46 = new Message46Decoder(message, bufferOffset, actingBlockLength, actingVersion, option);
+                decodedData.add(msg46.decode());
+                break;
+            
+            case 48: 
+                
+                msg48 = new Message48Decoder(message, bufferOffset, actingBlockLength, actingVersion, option);
+                decodedData.add(msg48.decodeNoMDEntries());
+                decodedData.add(msg48.decodeNoOrderIDEntries());
+                break;
+                
+            case 49: 
+                
+                msg49 = new Message49Decoder(message, bufferOffset, actingBlockLength, actingVersion, option);
+                decodedData.add(msg49.decode());
+                break;
+            
+            case 50: 
+                
+                msg50 = new Message50Decoder(message, bufferOffset, actingBlockLength, actingVersion, option);
+                decodedData.add(msg50.decode());
+                break;
+                
+            case 51: 
+                
+                msg51 = new Message51Decoder(message, bufferOffset, actingBlockLength, actingVersion, option);
+                decodedData.add(msg51.decode());
+                break;
+            
+            case 52: 
+                
+                msg52 = new Message52Decoder(message, bufferOffset, actingBlockLength, actingVersion, option);
+                decodedData.add(msg52.decode());
+                break;
+                
+            case 54: 
+                
+                msg54 = new Message54Decoder(message, bufferOffset, actingBlockLength, actingVersion, option);
+                decodedData.add(msg54.decodeNoEvents());
+                decodedData.add(msg54.decodeNoMDFeedTypes());
+                decodedData.add(msg54.decodeNoInstAttrib());
+                decodedData.add(msg54.decodeNoLotTypeRules());
+                break;
+            
+            case 55: 
+                
+                msg55 = new Message55Decoder(message, bufferOffset, actingBlockLength, actingVersion, option);
+                decodedData.add(msg55.decode());
+                decodedData.add(msg55.decodeNoMDFeedTypes());
+                decodedData.add(msg55.decodeNoInstAttrib());
+                decodedData.add(msg55.decodeNoLotTypeRules());
+                decodedData.add(msg55.decodeNoUnderlyings());
+                break;
+                
+            case 56: 
+                
+                msg56 = new Message56Decoder(message, bufferOffset, actingBlockLength, actingVersion, option);
+                decodedData.add(msg56.decodeNoEvents());
+                decodedData.add(msg56.decodeNoMDFeedTypes());
+                decodedData.add(msg56.decodeNoInstAttrib());
+                decodedData.add(msg56.decodeNoLotTypeRules());
+                decodedData.add(msg56.decodeNoLegs());
                 break;
         }
         

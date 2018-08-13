@@ -76,7 +76,7 @@ class Message38Decoder
            final SettlPriceType event1 = noMDEntries.settlPriceType();
            if(event1.Actual()){SPT = "1";}else{SPT = "0";}
            sbmd.append(SPT); 
-           if(event1.Final()){SPT = "1";}else{SPT = "0";}
+           if(event1.FinalDaily()){SPT = "1";}else{SPT = "0";}
            sbmd.append(SPT);
            if(event1.Intraday()){SPT = "1";}else{SPT = "0";}
            sbmd.append(SPT); 
@@ -94,7 +94,7 @@ class Message38Decoder
        if(option)
        {
            tableName = "INSERT INTO "
-            + "cme_market_datafeed_b.snapshotfullrefresh38_options "
+            + "cme_market_datafeed.snapshotfullrefresh38_options "
             + "(Seq_Num_34,Sending_Time_52,TempId,MsgType_35,LastMsgSeqNumProcessed_369,"
             + "TotNumReports_911,SecurityId_48,Rpt_Seq_83,TransactTime_60,"
             + "LastUpdateTime_779,TradeDate_75,MDSecurityTradingStatus_1682,"
@@ -106,7 +106,7 @@ class Message38Decoder
        else
        {
            tableName = "INSERT INTO "
-            + "cme_market_datafeed_b.snapshotfullrefresh38 "
+            + "cme_market_datafeed.snapshotfullrefresh38 "
             + "(Seq_Num_34,Sending_Time_52,TempId,MsgType_35,LastMsgSeqNumProcessed_369,"
             + "TotNumReports_911,SecurityId_48,Rpt_Seq_83,TransactTime_60,"
             + "LastUpdateTime_779,TradeDate_75,MDSecurityTradingStatus_1682,"

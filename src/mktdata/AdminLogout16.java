@@ -8,7 +8,7 @@ public class AdminLogout16
     public static final int BLOCK_LENGTH = 180;
     public static final int TEMPLATE_ID = 16;
     public static final int SCHEMA_ID = 1;
-    public static final int SCHEMA_VERSION = 5;
+    public static final int SCHEMA_VERSION = 9;
 
     private final AdminLogout16 parentMessage = this;
     private DirectBuffer buffer;

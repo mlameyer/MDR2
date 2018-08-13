@@ -8,7 +8,7 @@ public class AdminHeartbeat12
     public static final int BLOCK_LENGTH = 0;
     public static final int TEMPLATE_ID = 12;
     public static final int SCHEMA_ID = 1;
-    public static final int SCHEMA_VERSION = 5;
+    public static final int SCHEMA_VERSION = 9;
 
     private final AdminHeartbeat12 parentMessage = this;
     private DirectBuffer buffer;

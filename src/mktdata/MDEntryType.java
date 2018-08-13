@@ -6,15 +6,15 @@ public enum MDEntryType
     Bid((byte)48),
     Offer((byte)49),
     Trade((byte)50),
-    OpeningPrice((byte)52),
+    OpenPrice((byte)52),
     SettlementPrice((byte)54),
     TradingSessionHighPrice((byte)55),
     TradingSessionLowPrice((byte)56),
-    TradeVolume((byte)66),
+    ClearedVolume((byte)66),
     OpenInterest((byte)67),
     ImpliedBid((byte)69),
     ImpliedOffer((byte)70),
-    EmptyBook((byte)74),
+    BookReset((byte)74),
     SessionHighBid((byte)78),
     SessionLowOffer((byte)79),
     FixingPrice((byte)87),
@@ -41,15 +41,15 @@ public enum MDEntryType
             case 48: return Bid;
             case 49: return Offer;
             case 50: return Trade;
-            case 52: return OpeningPrice;
+            case 52: return OpenPrice;
             case 54: return SettlementPrice;
             case 55: return TradingSessionHighPrice;
             case 56: return TradingSessionLowPrice;
-            case 66: return TradeVolume;
+            case 66: return ClearedVolume;
             case 67: return OpenInterest;
             case 69: return ImpliedBid;
             case 70: return ImpliedOffer;
-            case 74: return EmptyBook;
+            case 74: return BookReset;
             case 78: return SessionHighBid;
             case 79: return SessionLowOffer;
             case 87: return FixingPrice;

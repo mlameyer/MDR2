@@ -8,7 +8,7 @@ public class SnapshotFullRefresh38
     public static final int BLOCK_LENGTH = 59;
     public static final int TEMPLATE_ID = 38;
     public static final int SCHEMA_ID = 1;
-    public static final int SCHEMA_VERSION = 5;
+    public static final int SCHEMA_VERSION = 9;
 
     private final SnapshotFullRefresh38 parentMessage = this;
     private DirectBuffer buffer;

@@ -5,10 +5,10 @@ import uk.co.real_logic.sbe.codec.java.*;
 
 public class MDInstrumentDefinitionFuture27
 {
-    public static final int BLOCK_LENGTH = 214;
+    public static final int BLOCK_LENGTH = 216;
     public static final int TEMPLATE_ID = 27;
     public static final int SCHEMA_ID = 1;
-    public static final int SCHEMA_VERSION = 5;
+    public static final int SCHEMA_VERSION = 9;
 
     private final MDInstrumentDefinitionFuture27 parentMessage = this;
     private DirectBuffer buffer;
@@ -2147,6 +2147,54 @@ public class MDInstrumentDefinitionFuture27
     public MDInstrumentDefinitionFuture27 userDefinedInstrument(final byte value)
     {
         CodecUtil.charPut(buffer, offset + 213, value);
+        return this;
+    }
+
+    public static int TradingReferenceDateId()
+    {
+        return 5796;
+    }
+
+    public static String TradingReferenceDateMetaAttribute(final MetaAttribute metaAttribute)
+    {
+        switch (metaAttribute)
+        {
+            case EPOCH: return "unix";
+            case TIME_UNIT: return "nanosecond";
+            case SEMANTIC_TYPE: return "LocalMktDate";
+        }
+
+        return "";
+    }
+
+    public static int tradingReferenceDateNullValue()
+    {
+        return 65535;
+    }
+
+    public static int tradingReferenceDateMinValue()
+    {
+        return 0;
+    }
+
+    public static int tradingReferenceDateMaxValue()
+    {
+        return 65534;
+    }
+
+    public int tradingReferenceDate()
+    {
+        if (actingVersion < 6)
+        {
+            return 65535;
+        }
+
+        return CodecUtil.uint16Get(buffer, offset + 214, java.nio.ByteOrder.LITTLE_ENDIAN);
+    }
+
+    public MDInstrumentDefinitionFuture27 tradingReferenceDate(final int value)
+    {
+        CodecUtil.uint16Put(buffer, offset + 214, value, java.nio.ByteOrder.LITTLE_ENDIAN);
         return this;
     }
 

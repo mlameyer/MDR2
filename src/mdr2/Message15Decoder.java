@@ -52,13 +52,13 @@ class Message15Decoder
        
        if(option)
        {
-           tableName = "INSERT INTO cme_market_datafeed_b.adminlogin15_options " 
+           tableName = "INSERT INTO cme_market_datafeed.adminlogin15_options " 
             + "(Seq_Num_34,Sending_Time_52,TempId,MsgType_35,HeartBtInt_108) "
             + "VALUES (?,?,?,?,?)";
        }
        else
        {
-           tableName = "INSERT INTO cme_market_datafeed_b.adminlogin15 " 
+           tableName = "INSERT INTO cme_market_datafeed.adminlogin15 " 
             + "(Seq_Num_34,Sending_Time_52,TempId,MsgType_35,HeartBtInt_108) "
             + "VALUES (?,?,?,?,?)";
        }

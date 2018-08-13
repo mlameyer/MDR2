@@ -5,10 +5,10 @@ import uk.co.real_logic.sbe.codec.java.*;
 
 public class MDInstrumentDefinitionOption41
 {
-    public static final int BLOCK_LENGTH = 211;
+    public static final int BLOCK_LENGTH = 213;
     public static final int TEMPLATE_ID = 41;
     public static final int SCHEMA_ID = 1;
-    public static final int SCHEMA_VERSION = 5;
+    public static final int SCHEMA_VERSION = 9;
 
     private final MDInstrumentDefinitionOption41 parentMessage = this;
     private DirectBuffer buffer;
@@ -2069,6 +2069,54 @@ public class MDInstrumentDefinitionOption41
         return this;
     }
 
+    public static int TradingReferenceDateId()
+    {
+        return 5796;
+    }
+
+    public static String TradingReferenceDateMetaAttribute(final MetaAttribute metaAttribute)
+    {
+        switch (metaAttribute)
+        {
+            case EPOCH: return "unix";
+            case TIME_UNIT: return "nanosecond";
+            case SEMANTIC_TYPE: return "LocalMktDate";
+        }
+
+        return "";
+    }
+
+    public static int tradingReferenceDateNullValue()
+    {
+        return 65535;
+    }
+
+    public static int tradingReferenceDateMinValue()
+    {
+        return 0;
+    }
+
+    public static int tradingReferenceDateMaxValue()
+    {
+        return 65534;
+    }
+
+    public int tradingReferenceDate()
+    {
+        if (actingVersion < 6)
+        {
+            return 65535;
+        }
+
+        return CodecUtil.uint16Get(buffer, offset + 211, java.nio.ByteOrder.LITTLE_ENDIAN);
+    }
+
+    public MDInstrumentDefinitionOption41 tradingReferenceDate(final int value)
+    {
+        CodecUtil.uint16Put(buffer, offset + 211, value, java.nio.ByteOrder.LITTLE_ENDIAN);
+        return this;
+    }
+
     private final NoEvents noEvents = new NoEvents();
 
     public static long NoEventsId()
@@ -3127,6 +3175,298 @@ public class MDInstrumentDefinitionOption41
         }
 
         public NoUnderlyings putUnderlyingSymbol(final byte[] src, final int srcOffset)
+        {
+            final int length = 20;
+            if (srcOffset < 0 || srcOffset > (src.length - length))
+            {
+                throw new IndexOutOfBoundsException(                    "srcOffset out of range for copy: offset=" + srcOffset);
+            }
+
+            CodecUtil.charsPut(buffer, this.offset + 4, src, srcOffset, length);
+            return this;
+        }
+    }
+
+    private final NoRelatedInstruments noRelatedInstruments = new NoRelatedInstruments();
+
+    public static long NoRelatedInstrumentsId()
+    {
+        return 1647;
+    }
+
+    public NoRelatedInstruments noRelatedInstruments()
+    {
+        noRelatedInstruments.wrapForDecode(parentMessage, buffer, actingVersion);
+        return noRelatedInstruments;
+    }
+
+    public NoRelatedInstruments noRelatedInstrumentsCount(final int count)
+    {
+        noRelatedInstruments.wrapForEncode(parentMessage, buffer, count);
+        return noRelatedInstruments;
+    }
+
+    public static class NoRelatedInstruments implements Iterable<NoRelatedInstruments>, java.util.Iterator<NoRelatedInstruments>
+    {
+        private static final int HEADER_SIZE = 3;
+        private final GroupSize dimensions = new GroupSize();
+        private MDInstrumentDefinitionOption41 parentMessage;
+        private DirectBuffer buffer;
+        private int blockLength;
+        private int actingVersion;
+        private int count;
+        private int index;
+        private int offset;
+
+        public void wrapForDecode(
+            final MDInstrumentDefinitionOption41 parentMessage, final DirectBuffer buffer, final int actingVersion)
+        {
+            this.parentMessage = parentMessage;
+            this.buffer = buffer;
+            dimensions.wrap(buffer, parentMessage.limit(), actingVersion);
+            blockLength = dimensions.blockLength();
+            count = dimensions.numInGroup();
+            this.actingVersion = actingVersion;
+            index = -1;
+            parentMessage.limit(parentMessage.limit() + HEADER_SIZE);
+        }
+
+        public void wrapForEncode(final MDInstrumentDefinitionOption41 parentMessage, final DirectBuffer buffer, final int count)
+        {
+            this.parentMessage = parentMessage;
+            this.buffer = buffer;
+            actingVersion = SCHEMA_VERSION;
+            dimensions.wrap(buffer, parentMessage.limit(), actingVersion);
+            dimensions.blockLength((int)24);
+            dimensions.numInGroup((short)count);
+            index = -1;
+            this.count = count;
+            blockLength = 24;
+            parentMessage.limit(parentMessage.limit() + HEADER_SIZE);
+        }
+
+        public static int sbeHeaderSize()
+        {
+            return HEADER_SIZE;
+        }
+
+        public static int sbeBlockLength()
+        {
+            return 24;
+        }
+
+        public int actingBlockLength()
+        {
+            return blockLength;
+        }
+
+        public int count()
+        {
+            return count;
+        }
+
+        @Override
+        public java.util.Iterator<NoRelatedInstruments> iterator()
+        {
+            return this;
+        }
+
+        @Override
+        public void remove()
+        {
+            throw new UnsupportedOperationException();
+        }
+
+        @Override
+        public boolean hasNext()
+        {
+            return (index + 1) < count;
+        }
+
+        @Override
+        public NoRelatedInstruments next()
+        {
+            if (index + 1 >= count)
+            {
+                throw new java.util.NoSuchElementException();
+            }
+
+            offset = parentMessage.limit();
+            parentMessage.limit(offset + blockLength);
+            ++index;
+
+            return this;
+        }
+
+        public static int RelatedSecurityIDId()
+        {
+            return 1650;
+        }
+
+        public static String RelatedSecurityIDMetaAttribute(final MetaAttribute metaAttribute)
+        {
+            switch (metaAttribute)
+            {
+                case EPOCH: return "unix";
+                case TIME_UNIT: return "nanosecond";
+                case SEMANTIC_TYPE: return "int";
+            }
+
+            return "";
+        }
+
+        public static int relatedSecurityIDNullValue()
+        {
+            return -2147483648;
+        }
+
+        public static int relatedSecurityIDMinValue()
+        {
+            return -2147483647;
+        }
+
+        public static int relatedSecurityIDMaxValue()
+        {
+            return 2147483647;
+        }
+
+        public int relatedSecurityID()
+        {
+            return CodecUtil.int32Get(buffer, offset + 0, java.nio.ByteOrder.LITTLE_ENDIAN);
+        }
+
+        public NoRelatedInstruments relatedSecurityID(final int value)
+        {
+            CodecUtil.int32Put(buffer, offset + 0, value, java.nio.ByteOrder.LITTLE_ENDIAN);
+            return this;
+        }
+
+        public static int RelatedSecurityIDSourceId()
+        {
+            return 1651;
+        }
+
+        public static String RelatedSecurityIDSourceMetaAttribute(final MetaAttribute metaAttribute)
+        {
+            switch (metaAttribute)
+            {
+                case EPOCH: return "unix";
+                case TIME_UNIT: return "nanosecond";
+                case SEMANTIC_TYPE: return "char";
+            }
+
+            return "";
+        }
+
+        public static byte relatedSecurityIDSourceNullValue()
+        {
+            return (byte)0;
+        }
+
+        public static byte relatedSecurityIDSourceMinValue()
+        {
+            return (byte)32;
+        }
+
+        public static byte relatedSecurityIDSourceMaxValue()
+        {
+            return (byte)126;
+        }
+
+        private static final byte[] relatedSecurityIDSourceValue = {56};
+
+        public static int relatedSecurityIDSourceLength()
+        {
+            return 1;
+        }
+
+        public byte relatedSecurityIDSource(final int index)
+        {
+            return relatedSecurityIDSourceValue[index];
+        }
+
+        public int getRelatedSecurityIDSource(final byte[] dst, final int offset, final int length)
+        {
+            final int bytesCopied = Math.min(length, 1);
+            System.arraycopy(relatedSecurityIDSourceValue, 0, dst, offset, bytesCopied);
+            return bytesCopied;
+        }
+
+        public static int RelatedSymbolId()
+        {
+            return 1649;
+        }
+
+        public static String RelatedSymbolMetaAttribute(final MetaAttribute metaAttribute)
+        {
+            switch (metaAttribute)
+            {
+                case EPOCH: return "unix";
+                case TIME_UNIT: return "nanosecond";
+                case SEMANTIC_TYPE: return "String";
+            }
+
+            return "";
+        }
+
+        public static byte relatedSymbolNullValue()
+        {
+            return (byte)0;
+        }
+
+        public static byte relatedSymbolMinValue()
+        {
+            return (byte)32;
+        }
+
+        public static byte relatedSymbolMaxValue()
+        {
+            return (byte)126;
+        }
+
+        public static int relatedSymbolLength()
+        {
+            return 20;
+        }
+
+        public byte relatedSymbol(final int index)
+        {
+            if (index < 0 || index >= 20)
+            {
+                throw new IndexOutOfBoundsException("index out of range: index=" + index);
+            }
+
+            return CodecUtil.charGet(buffer, this.offset + 4 + (index * 1));
+        }
+
+        public void relatedSymbol(final int index, final byte value)
+        {
+            if (index < 0 || index >= 20)
+            {
+                throw new IndexOutOfBoundsException("index out of range: index=" + index);
+            }
+
+            CodecUtil.charPut(buffer, this.offset + 4 + (index * 1), value);
+        }
+
+        public static String relatedSymbolCharacterEncoding()
+        {
+            return "UTF-8";
+        }
+
+        public int getRelatedSymbol(final byte[] dst, final int dstOffset)
+        {
+            final int length = 20;
+            if (dstOffset < 0 || dstOffset > (dst.length - length))
+            {
+                throw new IndexOutOfBoundsException(                    "dstOffset out of range for copy: offset=" + dstOffset);
+            }
+
+            CodecUtil.charsGet(buffer, this.offset + 4, dst, dstOffset, length);
+            return length;
+        }
+
+        public NoRelatedInstruments putRelatedSymbol(final byte[] src, final int srcOffset)
         {
             final int length = 20;
             if (srcOffset < 0 || srcOffset > (src.length - length))

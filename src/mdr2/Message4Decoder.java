@@ -80,7 +80,7 @@ class Message4Decoder
         if(option)
         {
             tableName = "INSERT INTO "
-             + "cme_market_datafeed_b.channelreset4_options "
+             + "cme_market_datafeed.channelreset4_options "
              + "(Seq_Num_34,Sending_Time_52,TempId,MsgType_35,TransactTime_60,"
                     + "MatchEventIndicator_5799,MDUpdateAction_279,"
                     + "MDEntryType_269,ApplID_1180) "
@@ -89,7 +89,7 @@ class Message4Decoder
         else
         {
             tableName = "INSERT INTO "
-             + "cme_market_datafeed_b.channelreset4 "
+             + "cme_market_datafeed.channelreset4 "
              + "(Seq_Num_34,Sending_Time_52,TempId,MsgType_35,TransactTime_60,"
                     + "MatchEventIndicator_5799,MDUpdateAction_279,"
                     + "MDEntryType_269,ApplID_1180) "

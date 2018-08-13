@@ -8,7 +8,7 @@ public class ChannelReset4
     public static final int BLOCK_LENGTH = 9;
     public static final int TEMPLATE_ID = 4;
     public static final int SCHEMA_ID = 1;
-    public static final int SCHEMA_VERSION = 5;
+    public static final int SCHEMA_VERSION = 9;
 
     private final ChannelReset4 parentMessage = this;
     private DirectBuffer buffer;

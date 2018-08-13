@@ -8,7 +8,7 @@ public class MDIncrementalRefreshDailyStatistics33
     public static final int BLOCK_LENGTH = 11;
     public static final int TEMPLATE_ID = 33;
     public static final int SCHEMA_ID = 1;
-    public static final int SCHEMA_VERSION = 5;
+    public static final int SCHEMA_VERSION = 9;
 
     private final MDIncrementalRefreshDailyStatistics33 parentMessage = this;
     private DirectBuffer buffer;

@@ -28,12 +28,12 @@ public class SettlPriceType
         return this;
     }
 
-    public boolean Final()
+    public boolean FinalDaily()
     {
         return CodecUtil.uint8GetChoice(buffer, offset, 0);
     }
 
-    public SettlPriceType Final(final boolean value)
+    public SettlPriceType FinalDaily(final boolean value)
     {
         CodecUtil.uint8PutChoice(buffer, offset, 0, value);
         return this;

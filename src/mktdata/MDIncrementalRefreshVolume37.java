@@ -8,7 +8,7 @@ public class MDIncrementalRefreshVolume37
     public static final int BLOCK_LENGTH = 11;
     public static final int TEMPLATE_ID = 37;
     public static final int SCHEMA_ID = 1;
-    public static final int SCHEMA_VERSION = 5;
+    public static final int SCHEMA_VERSION = 9;
 
     private final MDIncrementalRefreshVolume37 parentMessage = this;
     private DirectBuffer buffer;

@@ -8,7 +8,7 @@ public class SecurityStatus30
     public static final int BLOCK_LENGTH = 30;
     public static final int TEMPLATE_ID = 30;
     public static final int SCHEMA_ID = 1;
-    public static final int SCHEMA_VERSION = 5;
+    public static final int SCHEMA_VERSION = 9;
 
     private final SecurityStatus30 parentMessage = this;
     private DirectBuffer buffer;
