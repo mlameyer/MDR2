@@ -104,7 +104,7 @@ class Message39Decoder
        if(option)
        {
            tableName = "INSERT INTO "
-            + "cme_market_datafeed.quoterequest39_options "
+            + "cme_market_datafeed_b.quoterequest39_options "
             + "(Seq_Num_34,Sending_Time_52,TempId,MsgType_35,TransactTime_60,"
             + "QuoteReqID_131,MatchEventIndicator_5799,Symbol_55,SecurityId_48,"
             + "OrderQty_38,QuoteType_537,Side_54) "
@@ -113,7 +113,7 @@ class Message39Decoder
        else
        {
            tableName = "INSERT INTO "
-            + "cme_market_datafeed.quoterequest39 "
+            + "cme_market_datafeed_b.quoterequest39 "
             + "(Seq_Num_34,Sending_Time_52,TempId,MsgType_35,TransactTime_60,"
             + "QuoteReqID_131,MatchEventIndicator_5799,Symbol_55,SecurityId_48,"
             + "OrderQty_38,QuoteType_537,Side_54) "

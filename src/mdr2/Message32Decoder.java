@@ -89,7 +89,7 @@ public class Message32Decoder
        if(option)
        {
            tableName = "INSERT INTO "
-            + "cme_market_datafeed.mdincrementalrefreshbook32_options "
+            + "cme_market_datafeed_b.mdincrementalrefreshbook32_options "
             + "(Seq_Num_34,Sending_Time_52,TempId,MsgType_35,TransactTime_60,"
             + "MatchEventIndicator_5799,MDEntryPx_270,MDEntrySize_271,"
             + "SecurityId_48,Rpt_Seq_83,NumberOfOrders_346,MDPriceLevel_1023,"
@@ -98,7 +98,7 @@ public class Message32Decoder
        else
        {
            tableName = "INSERT INTO "
-            + "cme_market_datafeed.mdincrementalrefreshbook32 "
+            + "cme_market_datafeed_b.mdincrementalrefreshbook32 "
             + "(Seq_Num_34,Sending_Time_52,TempId,MsgType_35,TransactTime_60,"
             + "MatchEventIndicator_5799,MDEntryPx_270,MDEntrySize_271,"
             + "SecurityId_48,Rpt_Seq_83,NumberOfOrders_346,MDPriceLevel_1023,"

@@ -87,7 +87,7 @@ class Message50Decoder
        if(option)
        {
            tableName = "INSERT INTO "
-            + "cme_market_datafeed.mdincrementalrefreshlimitsbanding34_options "
+            + "cme_market_datafeed_b.mdincrementalrefreshlimitsbanding34_options "
             + "(Seq_Num_34,Sending_Time_52,TempId,MsgType_35,TransactTime_60,MatchEventIndicator_5799,"
             + "HighLimitPrice_1149,LowLimitPrice_1148,MaxPriceVariation_1143,"
             + "SecurityId_48,Rpt_Seq_83,MDUpdateAction_279,MDEntryType_269) "
@@ -96,7 +96,7 @@ class Message50Decoder
        else
        {
            tableName = "INSERT INTO "
-            + "cme_market_datafeed.mdincrementalrefreshlimitsbanding34 "
+            + "cme_market_datafeed_b.mdincrementalrefreshlimitsbanding34 "
             + "(Seq_Num_34,Sending_Time_52,TempId,MsgType_35,TransactTime_60,MatchEventIndicator_5799,"
             + "HighLimitPrice_1149,LowLimitPrice_1148,MaxPriceVariation_1143,"
             + "SecurityId_48,Rpt_Seq_83,MDUpdateAction_279,MDEntryType_269) "

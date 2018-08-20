@@ -53,14 +53,14 @@ public class Message12Decoder
        if(option)
        {
            tableName = "INSERT INTO "
-            + "cme_market_datafeed.adminheartbeat12_options "
+            + "cme_market_datafeed_b.adminheartbeat12_options "
             + "(Seq_Num_34,Sending_Time_52,TempId,MsgType_35) "
             + "VALUES (?,?,?,?)";
        }
        else
        {
            tableName = "INSERT INTO "
-            + "cme_market_datafeed.adminheartbeat12 "
+            + "cme_market_datafeed_b.adminheartbeat12 "
             + "(Seq_Num_34,Sending_Time_52,TempId,MsgType_35) "
             + "VALUES (?,?,?,?)";
        }

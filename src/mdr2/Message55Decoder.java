@@ -189,7 +189,7 @@ class Message55Decoder
         if(option)
         {
             tableName = "INSERT INTO "
-            + "cme_market_datafeed.mdinstrumentdefinitionoption41 "
+            + "cme_market_datafeed_b.mdinstrumentdefinitionoption41 "
             + "(Seq_Num_34,Sending_Time_52,TempId,MsgType_35,MatchEventIndicator_5799,"
             + "TotNumReports_911,SecurityUpdateAction_980,LastUpdateTime_779,"
             + "MDSecurityTradingStatus_1682,ApplID_1180,MarketSegmentID_1300,"
@@ -210,7 +210,7 @@ class Message55Decoder
         else
         {
             tableName = "INSERT INTO "
-            + "cme_market_datafeed.mdinstrumentdefinitionoption41 "
+            + "cme_market_datafeed_b.mdinstrumentdefinitionoption41 "
             + "(Seq_Num_34,Sending_Time_52,TempId,MsgType_35,MatchEventIndicator_5799,"
             + "TotNumReports_911,SecurityUpdateAction_980,LastUpdateTime_779,"
             + "MDSecurityTradingStatus_1682,ApplID_1180,MarketSegmentID_1300,"
@@ -390,7 +390,7 @@ class Message55Decoder
         if(option)
         {
             tableName = "INSERT INTO "
-            + "cme_market_datafeed.mdinstrumentdefinitionoption41NoMDFeedTypes "
+            + "cme_market_datafeed_b.mdinstrumentdefinitionoption41NoMDFeedTypes "
             + "(Seq_Num_34,Sending_Time_52,TempId,MsgType_35,MatchEventIndicator_5799,"
             + "TotNumReports_911,SecurityUpdateAction_980,LastUpdateTime_779,"
             + "MDSecurityTradingStatus_1682,ApplID_1180,MarketSegmentID_1300,"
@@ -411,7 +411,7 @@ class Message55Decoder
         else
         {
             tableName = "INSERT INTO "
-            + "cme_market_datafeed.mdinstrumentdefinitionoption41NoMDFeedTypes "
+            + "cme_market_datafeed_b.mdinstrumentdefinitionoption41NoMDFeedTypes "
             + "(Seq_Num_34,Sending_Time_52,TempId,MsgType_35,MatchEventIndicator_5799,"
             + "TotNumReports_911,SecurityUpdateAction_980,LastUpdateTime_779,"
             + "MDSecurityTradingStatus_1682,ApplID_1180,MarketSegmentID_1300,"
@@ -639,7 +639,7 @@ class Message55Decoder
         if(option)
         {
             tableName = "INSERT INTO "
-            + "cme_market_datafeed.mdinstrumentdefinitionoption41NoInstAttrib "
+            + "cme_market_datafeed_b.mdinstrumentdefinitionoption41NoInstAttrib "
             + "(Seq_Num_34,Sending_Time_52,TempId,MsgType_35,MatchEventIndicator_5799,"
             + "TotNumReports_911,SecurityUpdateAction_980,LastUpdateTime_779,"
             + "MDSecurityTradingStatus_1682,ApplID_1180,MarketSegmentID_1300,"
@@ -660,7 +660,7 @@ class Message55Decoder
         else
         {
             tableName = "INSERT INTO "
-            + "cme_market_datafeed.mdinstrumentdefinitionoption41NoInstAttrib "
+            + "cme_market_datafeed_b.mdinstrumentdefinitionoption41NoInstAttrib "
             + "(Seq_Num_34,Sending_Time_52,TempId,MsgType_35,MatchEventIndicator_5799,"
             + "TotNumReports_911,SecurityUpdateAction_980,LastUpdateTime_779,"
             + "MDSecurityTradingStatus_1682,ApplID_1180,MarketSegmentID_1300,"
@@ -894,7 +894,7 @@ class Message55Decoder
         if(option)
         {
             tableName = "INSERT INTO "
-            + "cme_market_datafeed.mdinstrumentdefinitionoption41NoLotTypeRules "
+            + "cme_market_datafeed_b.mdinstrumentdefinitionoption41NoLotTypeRules "
             + "(Seq_Num_34,Sending_Time_52,TempId,MsgType_35,MatchEventIndicator_5799,"
             + "TotNumReports_911,SecurityUpdateAction_980,LastUpdateTime_779,"
             + "MDSecurityTradingStatus_1682,ApplID_1180,MarketSegmentID_1300,"
@@ -915,7 +915,7 @@ class Message55Decoder
         else
         {
             tableName = "INSERT INTO "
-            + "cme_market_datafeed.mdinstrumentdefinitionoption41NoLotTypeRules "
+            + "cme_market_datafeed_b.mdinstrumentdefinitionoption41NoLotTypeRules "
             + "(Seq_Num_34,Sending_Time_52,TempId,MsgType_35,MatchEventIndicator_5799,"
             + "TotNumReports_911,SecurityUpdateAction_980,LastUpdateTime_779,"
             + "MDSecurityTradingStatus_1682,ApplID_1180,MarketSegmentID_1300,"
@@ -1164,7 +1164,7 @@ class Message55Decoder
         if(option)
         {
             tableName = "INSERT INTO "
-            + "cme_market_datafeed.mdinstrumentdefinitionoption41NoUnderlyings "
+            + "cme_market_datafeed_b.mdinstrumentdefinitionoption41NoUnderlyings "
             + "(Seq_Num_34,Sending_Time_52,TempId,MsgType_35,MatchEventIndicator_5799,"
             + "TotNumReports_911,SecurityUpdateAction_980,LastUpdateTime_779,"
             + "MDSecurityTradingStatus_1682,ApplID_1180,MarketSegmentID_1300,"
@@ -1186,7 +1186,7 @@ class Message55Decoder
         else
         {
             tableName = "INSERT INTO "
-            + "cme_market_datafeed.mdinstrumentdefinitionoption41NoUnderlyings "
+            + "cme_market_datafeed_b.mdinstrumentdefinitionoption41NoUnderlyings "
             + "(Seq_Num_34,Sending_Time_52,TempId,MsgType_35,MatchEventIndicator_5799,"
             + "TotNumReports_911,SecurityUpdateAction_980,LastUpdateTime_779,"
             + "MDSecurityTradingStatus_1682,ApplID_1180,MarketSegmentID_1300,"

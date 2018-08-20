@@ -84,7 +84,7 @@ class Message37Decoder
        if(option)
        {
            tableName = "INSERT INTO "
-            + "cme_market_datafeed.mdincrementalrefreshvolume37_options "
+            + "cme_market_datafeed_b.mdincrementalrefreshvolume37_options "
             + "(Seq_Num_34,Sending_Time_52,TempId,MsgType_35,TransactTime_60,"
             + "MatchEventIndicator_5799,MDEntrySize_271,"
             + "SecurityId_48,Rpt_Seq_83,MDUpdateAction_279,MDEntryType_269) "
@@ -93,7 +93,7 @@ class Message37Decoder
        else
        {
            tableName = "INSERT INTO "
-            + "cme_market_datafeed.mdincrementalrefreshvolume37 "
+            + "cme_market_datafeed_b.mdincrementalrefreshvolume37 "
             + "(Seq_Num_34,Sending_Time_52,TempId,MsgType_35,TransactTime_60,"
             + "MatchEventIndicator_5799,MDEntrySize_271,"
             + "SecurityId_48,Rpt_Seq_83,MDUpdateAction_279,MDEntryType_269) "

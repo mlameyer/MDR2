@@ -92,7 +92,7 @@ class Message30Decoder
         if(option)
         {
             tableName = "INSERT INTO "
-             + "cme_market_datafeed.securitystatus30_options "
+             + "cme_market_datafeed_b.securitystatus30_options "
              + "(Seq_Num_34,Sending_Time_52,TempId,MsgType_35,TransactTime_60,SecurityGroup_1151,"
              + "Asset_6937,SecurityId_48,TradeDate_75,MatchEventIndicator_5799,"
              + "SecurityTradingStatus_326,HaltReason_327,SecurityTradingEvent_1174) "
@@ -101,7 +101,7 @@ class Message30Decoder
         else
         {
             tableName = "INSERT INTO "
-             + "cme_market_datafeed.securitystatus30 "
+             + "cme_market_datafeed_b.securitystatus30 "
              + "(Seq_Num_34,Sending_Time_52,TempId,MsgType_35,TransactTime_60,SecurityGroup_1151,"
              + "Asset_6937,SecurityId_48,TradeDate_75,MatchEventIndicator_5799,"
              + "SecurityTradingStatus_326,HaltReason_327,SecurityTradingEvent_1174) "

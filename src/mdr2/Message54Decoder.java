@@ -184,7 +184,7 @@ class Message54Decoder
        if(option)
        {
            tableName = "INSERT INTO "
-            + "cme_market_datafeed.mdinstrumentdefinitionfuture27 "
+            + "cme_market_datafeed_b.mdinstrumentdefinitionfuture27 "
             + "(Seq_Num_34,Sending_Time_52,TempId,MsgType_35,MatchEventIndicator_5799,"
             + "TotNumReports_911,SecurityUpdateAction_980,LastUpdateTime_779,"
             + "MDSecurityTradingStatus_1682,ApplID_1180,MarketSegmentID_1300,"
@@ -207,7 +207,7 @@ class Message54Decoder
        else
        {
            tableName = "INSERT INTO "
-            + "cme_market_datafeed.mdinstrumentdefinitionfuture27 "
+            + "cme_market_datafeed_b.mdinstrumentdefinitionfuture27 "
             + "(Seq_Num_34,Sending_Time_52,TempId,MsgType_35,MatchEventIndicator_5799,"
             + "TotNumReports_911,SecurityUpdateAction_980,LastUpdateTime_779,"
             + "MDSecurityTradingStatus_1682,ApplID_1180,MarketSegmentID_1300,"
@@ -383,7 +383,7 @@ class Message54Decoder
        if(option)
        {
            tableName = "INSERT INTO "
-            + "cme_market_datafeed.mdinstrumentdefinitionfuture27NoMDFeedTypes "
+            + "cme_market_datafeed_b.mdinstrumentdefinitionfuture27NoMDFeedTypes "
             + "(Seq_Num_34,Sending_Time_52,TempId,MsgType_35,MatchEventIndicator_5799,"
             + "TotNumReports_911,SecurityUpdateAction_980,LastUpdateTime_779,"
             + "MDSecurityTradingStatus_1682,ApplID_1180,MarketSegmentID_1300,"
@@ -406,7 +406,7 @@ class Message54Decoder
        else
        {
            tableName = "INSERT INTO "
-            + "cme_market_datafeed.mdinstrumentdefinitionfuture27NoMDFeedTypes "
+            + "cme_market_datafeed_b.mdinstrumentdefinitionfuture27NoMDFeedTypes "
             + "(Seq_Num_34,Sending_Time_52,TempId,MsgType_35,MatchEventIndicator_5799,"
             + "TotNumReports_911,SecurityUpdateAction_980,LastUpdateTime_779,"
             + "MDSecurityTradingStatus_1682,ApplID_1180,MarketSegmentID_1300,"
@@ -630,7 +630,7 @@ class Message54Decoder
        if(option)
        {
            tableName = "INSERT INTO "
-            + "cme_market_datafeed.mdinstrumentdefinitionfuture27NoInstAttrib "
+            + "cme_market_datafeed_b.mdinstrumentdefinitionfuture27NoInstAttrib "
             + "(Seq_Num_34,Sending_Time_52,TempId,MsgType_35,MatchEventIndicator_5799,"
             + "TotNumReports_911,SecurityUpdateAction_980,LastUpdateTime_779,"
             + "MDSecurityTradingStatus_1682,ApplID_1180,MarketSegmentID_1300,"
@@ -653,7 +653,7 @@ class Message54Decoder
        else
        {
            tableName = "INSERT INTO "
-            + "cme_market_datafeed.mdinstrumentdefinitionfuture27NoInstAttrib "
+            + "cme_market_datafeed_b.mdinstrumentdefinitionfuture27NoInstAttrib "
             + "(Seq_Num_34,Sending_Time_52,TempId,MsgType_35,MatchEventIndicator_5799,"
             + "TotNumReports_911,SecurityUpdateAction_980,LastUpdateTime_779,"
             + "MDSecurityTradingStatus_1682,ApplID_1180,MarketSegmentID_1300,"
@@ -883,7 +883,7 @@ class Message54Decoder
        if(option)
        {
            tableName = "INSERT INTO "
-            + "cme_market_datafeed.mdinstrumentdefinitionfuture27NoLotTypeRules "
+            + "cme_market_datafeed_b.mdinstrumentdefinitionfuture27NoLotTypeRules "
             + "(Seq_Num_34,Sending_Time_52,TempId,MsgType_35,MatchEventIndicator_5799,"
             + "TotNumReports_911,SecurityUpdateAction_980,LastUpdateTime_779,"
             + "MDSecurityTradingStatus_1682,ApplID_1180,MarketSegmentID_1300,"
@@ -906,7 +906,7 @@ class Message54Decoder
        else
        {
            tableName = "INSERT INTO "
-            + "cme_market_datafeed.mdinstrumentdefinitionfuture27NoLotTypeRules "
+            + "cme_market_datafeed_b.mdinstrumentdefinitionfuture27NoLotTypeRules "
             + "(Seq_Num_34,Sending_Time_52,TempId,MsgType_35,MatchEventIndicator_5799,"
             + "TotNumReports_911,SecurityUpdateAction_980,LastUpdateTime_779,"
             + "MDSecurityTradingStatus_1682,ApplID_1180,MarketSegmentID_1300,"

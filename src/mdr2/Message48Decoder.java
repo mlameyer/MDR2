@@ -95,7 +95,7 @@ public class Message48Decoder
        if(option)
        {
            tableName = "INSERT INTO "
-            + "cme_market_datafeed.mdincrementalrefreshtradesummary42_options "
+            + "cme_market_datafeed_b.mdincrementalrefreshtradesummary42_options "
             + "(Seq_Num_34,Sending_Time_52,TempId,MsgType_35,TransactTime_60,"
             + "MatchEventIndicator_5799,MDEntryPx_270,MDEntrySize_271,"
             + "SecurityId_48,Rpt_Seq_83,NumberOfOrders_346,"
@@ -105,7 +105,7 @@ public class Message48Decoder
        else
        {
            tableName = "INSERT INTO "
-            + "cme_market_datafeed.mdincrementalrefreshtradesummary42 "
+            + "cme_market_datafeed_b.mdincrementalrefreshtradesummary42 "
             + "(Seq_Num_34,Sending_Time_52,TempId,MsgType_35,TransactTime_60,"
             + "MatchEventIndicator_5799,MDEntryPx_270,MDEntrySize_271,"
             + "SecurityId_48,Rpt_Seq_83,NumberOfOrders_346,"
@@ -176,7 +176,7 @@ public class Message48Decoder
        if(option)
        {
            tableName = "INSERT INTO "
-            + "cme_market_datafeed.mdincrementalrefreshtradesummary42NoOrderIDEntries_options "
+            + "cme_market_datafeed_b.mdincrementalrefreshtradesummary42NoOrderIDEntries_options "
             + "(Seq_Num_34,Sending_Time_52,TempId,MsgType_35,TransactTime_60,"
             + "MatchEventIndicator_5799,OrderID_37,LastQty_32) "
             + "VALUES (?,?,?,?,?,?,?,?)";
@@ -184,7 +184,7 @@ public class Message48Decoder
        else
        {
            tableName = "INSERT INTO "
-            + "cme_market_datafeed.mdincrementalrefreshtradesummary42NoOrderIDEntries "
+            + "cme_market_datafeed_b.mdincrementalrefreshtradesummary42NoOrderIDEntries "
             + "(Seq_Num_34,Sending_Time_52,TempId,MsgType_35,TransactTime_60,"
             + "MatchEventIndicator_5799,OrderID_37,LastQty_32) "
             + "VALUES (?,?,?,?,?,?,?,?)";
